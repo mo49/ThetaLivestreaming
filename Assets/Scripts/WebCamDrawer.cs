@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class WebCamDrawer : MonoBehaviour {
-	public string deviceNameKeyword = "THETA"; // 使いたいデバイスに含まれる文字列を指定
+	public string deviceNameKeyword = "THETA";
 
 	void Start() {
 		StartStreaming();
@@ -10,11 +10,11 @@ public class WebCamDrawer : MonoBehaviour {
 
 	void StartStreaming() {
 		WebCamDevice device = new WebCamDevice();
+		// 参照渡しでdeviceを書き換え
 		if (!FindDevice (ref device)) {
 			Debug.LogError("<"+deviceNameKeyword+">を含むWebカメラが検出できませんでした。");
 			return;
 		}
-		Debug.Log("find: device.name = " + device.name);
 		WebCamTexture webcamTexture = new WebCamTexture(device.name);
 		Material mat = GetTargetMaterial ();
 		if (mat == null) {
@@ -25,15 +25,16 @@ public class WebCamDrawer : MonoBehaviour {
 	}
 
 	bool FindDevice(ref WebCamDevice target) {
+		bool deviceExists = false;
 		WebCamDevice[] devices = WebCamTexture.devices;
-		foreach (WebCamDevice device in devices) {
-			Debug.Log("device.name = " + device.name);
+        foreach (WebCamDevice device in devices) {
+			Debug.Log("device.name => " + device.name);
 			if (device.name.Contains(deviceNameKeyword)) {
 				target = device;
-				return true;
+				deviceExists = true;
 			}
-		}
-		return false;
+        }
+		return deviceExists;
 	}
 
 	Material GetTargetMaterial() {
@@ -45,7 +46,7 @@ public class WebCamDrawer : MonoBehaviour {
 		if (renderer != null) {
 			return renderer.material;
 		}
-		Debug.LogError ("no Renderer/Skybox components found.");
+		Debug.LogError ("Renderer/Skyboxコンポーネントがありません。");
 		return null;
 	}
 }
