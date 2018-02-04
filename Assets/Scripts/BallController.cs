@@ -9,7 +9,7 @@ public class BallController : MonoBehaviour {
 	Transform m_mainCameraTrans;
 
 	void Start() {
-		m_mainCameraTrans = GameObject.Find("Main Camera").transform;
+		m_mainCameraTrans = GameObject.FindGameObjectWithTag ("MainCamera").transform;
 	}
 	
 	void Update () {
