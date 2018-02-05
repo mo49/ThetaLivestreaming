@@ -25,6 +25,9 @@ public class EnemyController : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.S)) {
 			StopCreatingEnemy ();
 		}
+		if(Input.GetKeyDown(KeyCode.D)) {
+			DestroyAllAtField ();
+		}
 	}
 
 	public void StartCreatingEnemy() {
@@ -59,6 +62,10 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	public void DestroyAllAtField() {
+		for (int i = 0; i < enemySpawnAreaTrans.childCount; i++) {
+			enemySpawnAreaTrans.GetChild(i).GetComponent<Enemy>().StartCoroutine("Die");
+		}
+		StopCreatingEnemy();
 		Invoke ("StartCreatingEnemy", 8f);
 	}
 }
