@@ -6,12 +6,17 @@ public class Enemy : MonoBehaviour {
 
 	[SerializeField] GameObject spawnEffectPrefab;
 	[SerializeField] GameObject dieEffectPrefab;
+	[SerializeField] int attackPower = 5;
 	private Animator _animator;
 	private Rigidbody _rb;
+
+	private HitPointManager hpManager;
 
 	void Start() {
 		_animator = GetComponent<Animator>();
 		_rb = GetComponent<Rigidbody>();
+
+		hpManager = HitPointManager.Instance;
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -19,15 +24,24 @@ public class Enemy : MonoBehaviour {
 			_rb.velocity = Vector3.zero;
 
 			// attack
+			InvokeRepeating("Attack", 1f, 5f);
 		}
 	}
 
 	public IEnumerator Die() {
 		yield return new WaitForSeconds(Random.Range(0f, 2f));
 
+		CancelInvoke("Attack");
 		_rb.velocity = Vector3.zero;
 		_animator.SetTrigger("Death");
 		Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
+	}
+
+	void Attack() {
+		string attackParam = Random.Range(-1f,1f) > 0 ? "Attack1" : "Attack2";
+		_animator.SetTrigger(attackParam);
+
+		hpManager.SetHP(hpManager.GetHP() - attackPower);
 	}
 
 	void End() {

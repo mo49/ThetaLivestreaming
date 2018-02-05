@@ -246,7 +246,7 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000010938986662, guid: 042142d01b081ab4ca555ec74a04c2cb,
     type: 2}
   m_PrefabInternal: {fileID: 1876515767}
---- !u!81 &423696974
+--- !u!81 &423696977
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1577,8 +1577,6 @@ GameObject:
   - component: {fileID: 1989803911}
   - component: {fileID: 1989803910}
   - component: {fileID: 1989803909}
-  - component: {fileID: 1989803913}
-  - component: {fileID: 1989803914}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1649,55 +1647,6 @@ Transform:
   m_Father: {fileID: 971954822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1989803913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989803908}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a67c22fc431784645b9f653139f6599b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ballPrefab: {fileID: 1312692305994914, guid: cdf37a8e07c774018b9d3a296448b1f6,
-    type: 2}
---- !u!114 &1989803914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1989803908}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3d58959627074d4a9a4e2b06f2c7731, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interOcularDistance: 0.06
-  eyeHeight: 0
-  eyeForward: -0.04
-  useCustomEyePlacement: 0
-  worldScale: 1
-  useCustomPositionScaling: 0
-  positionScales: {x: 1, y: 1, z: 1}
-  suppressProjectionUpdates: 0
-  oversamplingRatio: 1
-  gaze: 1
-  orientation: 1
-  position: 1
-  skipAutoCalibrationCheck: 1
-  disableTimewarp: 0
-  disableFading: 0
-  disableDistortion: 0
-  layerType: 0
-  eyeCameraPrototype: {fileID: 0}
-  useCameraPrefab: 0
-  leftEyeOverride: {fileID: 0}
-  rightEyeOverride: {fileID: 0}
-  useCameraOverride: 0
-  antialiasSampleCount: 1
-  overrideAntialiasing: 0
-  enableRendering: 1
 --- !u!1 &2078573636
 GameObject:
   m_ObjectHideFlags: 0
