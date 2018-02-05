@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-	[SerializeField] GameObject spawnEffectPrefab;
+	[SerializeField] GameObject attackEffectPrefab;
 	[SerializeField] GameObject dieEffectPrefab;
 	[SerializeField] int attackPower = 5;
 	private Animator _animator;
@@ -49,8 +49,12 @@ public class Enemy : MonoBehaviour {
 	void Attack() {
 		string attackParam = Random.Range(-1f,1f) > 0 ? "Attack1" : "Attack2";
 		_animator.SetTrigger(attackParam);
+	}
 
+	void AttackHit() {
+		// 攻撃が当たった瞬間
 		hpManager.SetHP(hpManager.GetHP() - attackPower);
+		Instantiate(attackEffectPrefab, transform.position, Quaternion.identity);
 	}
 
 	void End() {
