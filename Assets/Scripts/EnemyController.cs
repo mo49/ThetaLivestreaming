@@ -11,9 +11,13 @@ public class EnemyController : MonoBehaviour {
 
 	[SerializeField] int maxEnemyNum;
 
-	private int currentEnemyNum = 0;
+	EnemyManager enemyManager;
+
+	private int currentEnemyIndex = 0;
 
 	void Start() {
+		enemyManager = EnemyManager.Instance;
+
 		StartCreatingEnemy ();
 	}
 
@@ -38,7 +42,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	IEnumerator CreateEnemy() {
-		while(currentEnemyNum < maxEnemyNum) {
+		while(currentEnemyIndex < maxEnemyNum) {
 			var enemyInstance = Instantiate (
 				devilPrefab,
 				transform.position,
@@ -52,11 +56,7 @@ public class EnemyController : MonoBehaviour {
 				Mathf.Sin(Random.Range(-1f,1f)) * 25f
 			);
 			enemyTrans.LookAt (goalTrans);
-			enemyInstance.GetComponent<Rigidbody> ().AddForce (
-				enemyInstance.transform.forward * Random.Range(0.1f, 1f),
-				ForceMode.VelocityChange
-			);
-			currentEnemyNum++;
+			currentEnemyIndex++;
 			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
 		}
 	}
@@ -66,6 +66,14 @@ public class EnemyController : MonoBehaviour {
 			enemySpawnAreaTrans.GetChild(i).GetComponent<Enemy>().StartCoroutine("Die");
 		}
 		StopCreatingEnemy();
+
+		enemyManager.SetAliveCount(maxEnemyNum - currentEnemyIndex);
+
+		// 終了判定
+		if(enemyManager.GetAliveCount() <= 0) {
+			Debug.Log("勝ち!!");
+			return;
+		}
 		Invoke ("StartCreatingEnemy", 8f);
 	}
 }

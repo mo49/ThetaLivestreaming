@@ -17,6 +17,15 @@ public class Enemy : MonoBehaviour {
 		_rb = GetComponent<Rigidbody>();
 
 		hpManager = HitPointManager.Instance;
+
+		Invoke("StartMoving", 2f);
+	}
+
+	void StartMoving() {
+		_rb.AddForce (
+			transform.forward * Random.Range(0.1f, 1f),
+			ForceMode.VelocityChange
+		);
 	}
 
 	void OnTriggerEnter(Collider other) {
