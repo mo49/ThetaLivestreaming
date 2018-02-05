@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] GameObject devilPrefab;
 	[SerializeField] GameObject bossPrefab;
 	[SerializeField] Transform goalTrans;
-	[SerializeField] GameObject enemySpawnArea;
+	[SerializeField] Transform enemySpawnAreaTrans;
 
 	[SerializeField] int maxEnemyNum;
 
@@ -42,17 +42,19 @@ public class EnemyController : MonoBehaviour {
 				Quaternion.identity
 			);
 			Transform enemyTrans = enemyInstance.transform;
-			enemyTrans.parent = enemySpawnArea.transform;
+			enemyTrans.parent = enemySpawnAreaTrans;
 			enemyTrans.localPosition = new Vector3 (
-				Mathf.Sin(Random.Range(-1f,1f)) * 5f,
+				Mathf.Sin(Random.Range(-1f,1f)) * 10f,
 				0f,
-				Mathf.Sin(Random.Range(-1f,1f)) * 10f
+				Mathf.Sin(Random.Range(-1f,1f)) * 25f
 			);
-			//enemyInstance.transform.position.y = 0f;
-			enemyInstance.transform.LookAt (goalTrans);
-			enemyInstance.GetComponent<Rigidbody> ().AddForce (enemyInstance.transform.forward * 1, ForceMode.VelocityChange);
+			enemyTrans.LookAt (goalTrans);
+			enemyInstance.GetComponent<Rigidbody> ().AddForce (
+				enemyInstance.transform.forward * Random.Range(0.1f, 1f),
+				ForceMode.VelocityChange
+			);
 			currentEnemyNum++;
-			yield return new WaitForSeconds (1f);
+			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
 		}
 	}
 
