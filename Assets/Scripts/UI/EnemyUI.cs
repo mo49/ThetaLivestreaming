@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyUI : MonoBehaviour {
 
-	// Use this for initialization
+	[SerializeField] Text m_enemyUI;
+
+	EnemyManager enemyManager;
+
 	void Start () {
-		
+		enemyManager = EnemyManager.Instance;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	public void UpdateState() {
+		m_enemyUI.text = "敵：" + enemyManager.GetAliveCount() + " / " + enemyManager.GetMaxCount();
 	}
 }

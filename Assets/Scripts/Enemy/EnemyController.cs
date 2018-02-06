@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] GameObject bossPrefab;
 	[SerializeField] Transform goalTrans;
 	[SerializeField] Transform enemySpawnAreaTrans;
+	[SerializeField] EnemyUI enemyUI;
 
 	[SerializeField] int maxEnemyNum;
 
@@ -17,6 +18,11 @@ public class EnemyController : MonoBehaviour {
 
 	void Start() {
 		enemyManager = EnemyManager.Instance;
+
+		enemyManager.SetMaxCount(maxEnemyNum);
+		enemyManager.SetAliveCount(maxEnemyNum);
+
+		enemyUI.UpdateState();
 
 		StartCreatingEnemy ();
 	}
@@ -42,7 +48,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	IEnumerator CreateEnemy() {
-		while(currentEnemyIndex < maxEnemyNum) {
+		while(currentEnemyIndex < enemyManager.GetMaxCount()) {
 			var enemyInstance = Instantiate (
 				devilPrefab,
 				transform.position,
@@ -62,15 +68,16 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	public void DestroyAllAtField() {
-		for (int i = 0; i < enemySpawnAreaTrans.childCount; i++) {
+		int enemyCountAtField = enemySpawnAreaTrans.childCount;
+
+		for (int i = 0; i < enemyCountAtField; i++) {
 			enemySpawnAreaTrans.GetChild(i).GetComponent<Enemy>().StartCoroutine("Die");
 		}
 		StopCreatingEnemy();
 
-		enemyManager.SetAliveCount(maxEnemyNum - currentEnemyIndex);
+		enemyManager.SetAliveCount(enemyManager.GetAliveCount() - enemyCountAtField);
 
 		// 終了判定
-		Debug.Log(string.Format("敵：{0}/{1}", enemyManager.GetAliveCount(), maxEnemyNum));
 		if(enemyManager.GetAliveCount() <= 0) {
 			Debug.Log("勝ち!!");
 			return;

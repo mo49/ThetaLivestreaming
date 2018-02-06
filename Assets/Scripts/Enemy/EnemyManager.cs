@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour {
 
 	private static EnemyManager m_instance;
+	private int maxCount;
 	private int currentIndex;
 	private int aliveCount;
 	
@@ -19,8 +20,16 @@ public class EnemyManager : MonoBehaviour {
 		}
 	}
 
+	public void SetMaxCount(int num) {
+		this.maxCount = num <= 0 ? 0 : num ;
+	}
+
+	public int GetMaxCount() {
+		return this.maxCount;
+	}
+
 	public void SetCurrentIndex(int num) {
-		this.currentIndex = num;
+		this.currentIndex = num <= 0 ? 0 : num ;
 	}
 
 	public int GetCurrentIndex() {
@@ -28,7 +37,7 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	public void SetAliveCount(int num) {
-		this.aliveCount = num;
+		this.aliveCount = num <= 0 ? 0 : num ;
 	}
 
 	public int GetAliveCount() {

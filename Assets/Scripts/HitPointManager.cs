@@ -18,7 +18,7 @@ public class HitPointManager : MonoBehaviour {
 	}
 
 	public void SetHP(int num) {
-		this.hp = num;
+		this.hp = num <= 0 ? 0 : num ;
 	}
 
 	public int GetHP() {

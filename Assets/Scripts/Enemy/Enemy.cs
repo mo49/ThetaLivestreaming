@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour {
 	private HitPointManager hpManager;
 
 	private PlayerUI playerUI;
+	private EnemyUI enemyUI;
 
 	void Start() {
 		_animator = GetComponent<Animator>();
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour {
 		hpManager = HitPointManager.Instance;
 
 		playerUI = GameObject.Find("GameUI").GetComponent<PlayerUI>();
+		enemyUI = GameObject.Find("GameUI").GetComponent<EnemyUI>();
 
 		Invoke("StartMoving", 2f);
 	}
@@ -64,6 +66,7 @@ public class Enemy : MonoBehaviour {
 
 	void End() {
 		// 死亡アニメーションが終了した瞬間
+		enemyUI.UpdateState();
 		Destroy(gameObject);
 	}
 }
