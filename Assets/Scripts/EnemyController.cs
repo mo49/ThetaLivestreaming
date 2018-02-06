@@ -51,9 +51,9 @@ public class EnemyController : MonoBehaviour {
 			Transform enemyTrans = enemyInstance.transform;
 			enemyTrans.parent = enemySpawnAreaTrans;
 			enemyTrans.localPosition = new Vector3 (
-				Mathf.Sin(Random.Range(-1f,1f)) * 10f,
+				Mathf.Sin(Random.Range(-1f,1f)) * 5f,
 				0f,
-				Mathf.Sin(Random.Range(-1f,1f)) * 25f
+				Mathf.Sin(Random.Range(-1f,1f)) * 15f
 			);
 			enemyTrans.LookAt (goalTrans);
 			currentEnemyIndex++;
