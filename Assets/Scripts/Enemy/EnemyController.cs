@@ -58,10 +58,14 @@ public class EnemyController : MonoBehaviour {
 			enemyTrans.parent = enemySpawnAreaTrans;
 			enemyTrans.localPosition = new Vector3 (
 				Mathf.Sin(Random.Range(-1f,1f)) * 5f,
-				0f,
+				Random.Range(-3f,0f),
 				Mathf.Sin(Random.Range(-1f,1f)) * 15f
 			);
-			enemyTrans.LookAt (goalTrans);
+			enemyTrans.LookAt (new Vector3(
+				goalTrans.position.x,
+				enemyTrans.position.y,
+				goalTrans.position.z
+			));
 			currentEnemyIndex++;
 			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
 		}
