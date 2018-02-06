@@ -6,6 +6,11 @@ TagManager:
   tags:
   - RealPlayer
   - Enemy/Devil
+  - Disaster/Fire
+  - Disaster/Snow
+  - Disaster/Thunder
+  - Disaster/Water
+  - Disaster/Typhoon
   layers:
   - Default
   - TransparentFX
