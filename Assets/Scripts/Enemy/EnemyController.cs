@@ -70,6 +70,7 @@ public class EnemyController : MonoBehaviour {
 		enemyManager.SetAliveCount(maxEnemyNum - currentEnemyIndex);
 
 		// 終了判定
+		Debug.Log(string.Format("敵：{0}/{1}", enemyManager.GetAliveCount(), maxEnemyNum));
 		if(enemyManager.GetAliveCount() <= 0) {
 			Debug.Log("勝ち!!");
 			return;

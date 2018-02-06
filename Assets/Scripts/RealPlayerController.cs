@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class RealPlayerController : MonoBehaviour {
 
-	[SerializeField] GameObject m_realPlayer;
-
-	bool isActive = true;
+	[SerializeField] MeshRenderer m_playerRenderer;
 
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
-			Toggle();
+			m_playerRenderer.enabled = !m_playerRenderer.enabled;
 		}
 	}
 
-	void Toggle() {
-		if(isActive) {
-			m_realPlayer.SetActive(false);
-		} else {
-			m_realPlayer.SetActive(true);
-		}
-		isActive = !isActive;
-	}
 }
