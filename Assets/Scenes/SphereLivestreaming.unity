@@ -990,8 +990,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1353646389}
+  - component: {fileID: 1353646390}
   m_Layer: 0
-  m_Name: GameGUI
+  m_Name: GameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1011,6 +1012,20 @@ Transform:
   m_Father: {fileID: 1772629572}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1353646390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1353646388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d1c623f251d47c7aa73e6ac3b06a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHitPoint: 100
+  m_hpSlider: {fileID: 421362730}
+  m_hpFillImage: {fileID: 1374990462}
 --- !u!1 &1374990460
 GameObject:
   m_ObjectHideFlags: 0

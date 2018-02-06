@@ -12,11 +12,15 @@ public class Enemy : MonoBehaviour {
 
 	private HitPointManager hpManager;
 
+	private PlayerUI playerUI;
+
 	void Start() {
 		_animator = GetComponent<Animator>();
 		_rb = GetComponent<Rigidbody>();
 
 		hpManager = HitPointManager.Instance;
+
+		playerUI = GameObject.Find("GameUI").GetComponent<PlayerUI>();
 
 		Invoke("StartMoving", 2f);
 	}
@@ -32,7 +36,7 @@ public class Enemy : MonoBehaviour {
 		if(other.tag == "RealPlayer") {
 			_rb.velocity = Vector3.zero;
 
-			// attack
+			// 攻撃開始
 			InvokeRepeating("Attack", 1f, 5f);
 		}
 	}
@@ -55,9 +59,11 @@ public class Enemy : MonoBehaviour {
 		// 攻撃が当たった瞬間
 		hpManager.SetHP(hpManager.GetHP() - attackPower);
 		Instantiate(attackEffectPrefab, transform.position, Quaternion.identity);
+		playerUI.UpdateState();
 	}
 
 	void End() {
+		// 死亡アニメーションが終了した瞬間
 		Destroy(gameObject);
 	}
 }
