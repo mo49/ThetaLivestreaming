@@ -683,7 +683,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_disasterPrefab: {fileID: 1955970636209338, guid: 447b374d37cef4b528f6cf1be4c2c3ec,
     type: 2}
-  m_castChargePrefab: {fileID: 1525317160642690, guid: f980f35b2665e65409a449e52e961c09,
+  m_castChargePrefab: {fileID: 1700949013425394, guid: 2824d55cc0699c64884915248934de02,
     type: 2}
   m_castingSound: {fileID: 8300000, guid: 7cd38f1534878486594b71ed108d8fda, type: 3}
   m_selectedSound: {fileID: 8300000, guid: a2d56e75421a84fa68218dd2788f9bb1, type: 3}
