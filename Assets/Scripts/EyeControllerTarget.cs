@@ -15,10 +15,15 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	AudioSource m_audio;
 	EnemyController m_enemyController;
+	SwitchUI m_switchUI;
 	
 	void Awake() {
 		m_audio = GetComponent<AudioSource> ();
 		m_enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
+		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
+
+		// Debug.Log(m_castingSound.length.ToString());
+		m_switchUI.SetCastTime(Mathf.Floor(m_castingSound.length).ToString());
 
 		Hover(false);
 	}
