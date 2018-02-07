@@ -9,37 +9,37 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1296197161671886}
+  m_RootGameObject: {fileID: 1241363343796072}
   m_IsPrefabParent: 1
---- !u!1 &1296197161671886
+--- !u!1 &1241363343796072
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4796721103116734}
-  - component: {fileID: 33999257636659694}
-  - component: {fileID: 65588812875263902}
-  - component: {fileID: 23095433371371450}
-  - component: {fileID: 54860171662196596}
-  - component: {fileID: 114286785684532208}
-  - component: {fileID: 114011096103597284}
-  - component: {fileID: 114109948041723898}
-  - component: {fileID: 82157625485977992}
+  - component: {fileID: 4517599244521004}
+  - component: {fileID: 33233901415026318}
+  - component: {fileID: 65338358923314002}
+  - component: {fileID: 23398604566009228}
+  - component: {fileID: 54276064657596710}
+  - component: {fileID: 114211445378453320}
+  - component: {fileID: 114325902793620958}
+  - component: {fileID: 114619933264409914}
+  - component: {fileID: 82977943042243982}
   m_Layer: 0
-  m_Name: Cyclone
-  m_TagString: Disaster/Cyclone
+  m_Name: Earth
+  m_TagString: Disaster/Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4796721103116734
+--- !u!4 &4517599244521004
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
@@ -47,12 +47,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23095433371371450
+--- !u!23 &23398604566009228
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6b31df859ac99444bb21f034001e9db7, type: 2}
+  - {fileID: 2100000, guid: c5d2bffbd22ea40aa8d8c42cc689d306, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,19 +81,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33999257636659694
+--- !u!33 &33233901415026318
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_Mesh: {fileID: 0}
---- !u!54 &54860171662196596
+--- !u!54 &54276064657596710
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -103,24 +103,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65588812875263902
+--- !u!65 &65338358923314002
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82157625485977992
+--- !u!82 &82977943042243982
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -195,12 +195,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114011096103597284
+--- !u!114 &114211445378453320
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a59784f592d24c7fb8561ba75c10ada, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114325902793620958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241363343796072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd9432855aed4f4d9d9fff2252da1f5, type: 3}
@@ -247,28 +258,17 @@ MonoBehaviour:
   scale: {x: 1, y: 1}
   rotation: 0
   oldScale: {x: 2, y: 2, z: 2}
---- !u!114 &114109948041723898
+--- !u!114 &114619933264409914
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
+  m_GameObject: {fileID: 1241363343796072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f543cb2472ef654fb96ebc8be0d4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_castingSound: {fileID: 8300000, guid: 7a9b416ea52c447f5b2204153019442f, type: 3}
-  m_disasterPrefab: {fileID: 1519055054996350, guid: 4cf8d7abab09447f29d8632485966911,
+  m_castingSound: {fileID: 8300000, guid: a5b23b363e54b47b68d45031cbe140ad, type: 3}
+  m_disasterPrefab: {fileID: 1955970636209338, guid: 447b374d37cef4b528f6cf1be4c2c3ec,
     type: 2}
---- !u!114 &114286785684532208
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1296197161671886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a59784f592d24c7fb8561ba75c10ada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

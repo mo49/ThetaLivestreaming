@@ -72,9 +72,10 @@ GameObject:
   - component: {fileID: 4368984169465378}
   - component: {fileID: 114695472878236876}
   - component: {fileID: 82695480444127048}
+  - component: {fileID: 114012998132950030}
   m_Layer: 0
-  m_Name: Cyclone
-  m_TagString: Untagged
+  m_Name: Wind
+  m_TagString: Disaster/Wind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -369,6 +370,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114012998132950030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1519055054996350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114695472878236876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lifeSpan: 8
+  m_lifeSpan: 12
 --- !u!198 &198013881192067610
 ParticleSystem:
   m_ObjectHideFlags: 1

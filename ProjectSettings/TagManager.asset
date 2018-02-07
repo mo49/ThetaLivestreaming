@@ -12,6 +12,9 @@ TagManager:
   - Disaster/Water
   - Disaster/Typhoon
   - Disaster/Cyclone
+  - Disaster/Ice
+  - Disaster/Wind
+  - Disaster/Earth
   layers:
   - Default
   - TransparentFX

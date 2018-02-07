@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 4525715748207412}
   - component: {fileID: 114822159770907886}
   - component: {fileID: 82529053545119976}
+  - component: {fileID: 114742325969503726}
   m_Layer: 0
-  m_Name: Snow
-  m_TagString: Untagged
+  m_Name: Ice
+  m_TagString: Disaster/Ice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -245,6 +246,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114742325969503726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1392664634882012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114822159770907886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lifeSpan: 8
+  m_lifeSpan: 12
 --- !u!198 &198153868510600010
 ParticleSystem:
   m_ObjectHideFlags: 1

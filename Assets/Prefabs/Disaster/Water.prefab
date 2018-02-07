@@ -70,10 +70,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4956630251942250}
+  - component: {fileID: 114932667550651802}
   - component: {fileID: 82775474277060166}
+  - component: {fileID: 114560577392720822}
   m_Layer: 0
   m_Name: Water
-  m_TagString: Untagged
+  m_TagString: Disaster/Water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -554,6 +556,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114560577392720822
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443960824676170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114932667550651802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443960824676170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_lifeSpan: 12
 --- !u!198 &198121676677269650
 ParticleSystem:
   m_ObjectHideFlags: 1
