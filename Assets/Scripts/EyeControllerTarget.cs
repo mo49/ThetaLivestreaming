@@ -12,8 +12,6 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	AudioSource m_audio;
 	[SerializeField] AudioClip m_castingSound;
-	[SerializeField] AudioClip m_disasterSound;
-	// [SerializeField] GameObject m_disasters;
 	[SerializeField] GameObject m_disasterPrefab;
 	
 	void Awake() {
@@ -31,7 +29,6 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		m_audio.PlayOneShot(m_castingSound);
 		Debug.Log ("音源の時間：" + m_castingSound.length);
 		Invoke ("Explosion", m_castingSound.length - 2f);
-
 	}
 
 	public void OnTriggerClick(bool isClick) {
@@ -46,9 +43,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	}
 
 	void Explosion() {
-		var disasterInstance = Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
-		// disasterInstance.transform.parent = m_disasters.transform;
-		m_audio.PlayOneShot(m_disasterSound);
+		Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
 
 		Destroy(gameObject);
 	}

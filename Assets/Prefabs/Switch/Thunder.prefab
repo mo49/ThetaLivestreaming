@@ -206,8 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f543cb2472ef654fb96ebc8be0d4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_castingSound: {fileID: 0}
-  m_disasterSound: {fileID: 0}
+  m_castingSound: {fileID: 8300000, guid: e9cf0965bddd94bcc85d4f2acb94a66d, type: 3}
   m_disasterPrefab: {fileID: 1646392551826742, guid: 58f9cf4cb2fe4468b936256b537164f1,
     type: 2}
 --- !u!114 &114761617983812134
