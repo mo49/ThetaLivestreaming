@@ -33,6 +33,21 @@ HMDをかぶるとリアルの自分が目の前に映ります。
 
 ### 音
 
+- 爆裂魔法
+https://soundeffect-lab.info/sound/battle/
+
+- 雷
+https://on-jin.com/sound/kan.php?kate=%E9%9B%B7
+
+- 火
+https://on-jin.com/sound/listshow.php?pagename=kan&title=%E7%81%BD%E5%AE%B3%E3%83%BB%E7%81%AB%E5%B1%B1%E3%83%9E%E3%82%B0%E3%83%9E&janl=%E7%92%B0%E5%A2%83%E7%B3%BB%E9%9F%B3&bunr=%E7%81%AB%E5%B1%B1&kate=%E7%81%AB
+
+- 滝
+https://on-jin.com/sound/listshow.php?pagename=kan&title=%E6%BB%9D&janl=%E7%92%B0%E5%A2%83%E7%B3%BB%E9%9F%B3&bunr=%E5%B7%9D&kate=%E6%B0%B4
+
+- 爆発(水）
+http://commons.nicovideo.jp/material/nc85041
+
 ### 画像
 
 - [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos)

@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips: []
 --- !u!114 &114822159770907886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lifeSpan: 12
+  m_lifeSpan: 10
 --- !u!198 &198153868510600010
 ParticleSystem:
   m_ObjectHideFlags: 1

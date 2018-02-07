@@ -253,7 +253,7 @@ AudioSource:
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -319,6 +319,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 997405099f16d4d05ae597650f2e51b3, type: 3}
+  - {fileID: 8300000, guid: ae34b115936c74a10bb3a09d9cf32d2c, type: 3}
 --- !u!114 &114818621938061270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lifeSpan: 12
+  m_lifeSpan: 10
 --- !u!198 &198105063256802414
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour {
 
 	[SerializeField] GameObject attackEffectPrefab;
 	[SerializeField] GameObject dieEffectPrefab;
-	[SerializeField] int attackPower = 5;
+	[SerializeField] int attackPower = 3;
 	private Animator _animator;
 	private Rigidbody _rb;
 
@@ -44,9 +44,10 @@ public class Enemy : MonoBehaviour {
 	}
 
 	public IEnumerator Die() {
-		yield return new WaitForSeconds(Random.Range(0f, 2f));
-
 		CancelInvoke("Attack");
+
+		yield return new WaitForSeconds(Random.Range(0.5f, 3f));
+
 		_rb.velocity = Vector3.zero;
 		_animator.SetTrigger("Death");
 		Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);

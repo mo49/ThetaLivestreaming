@@ -567,6 +567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642cc9d8e87bb45218e7fe6cf68e9c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 80c01ef3c73d14cb2a62410c60727a6e, type: 3}
+  - {fileID: 8300000, guid: 07bd584cb632d480da9c8b95817d189b, type: 3}
 --- !u!114 &114932667550651802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -578,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a8fc431544940069550d445d2a1010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_lifeSpan: 12
+  m_lifeSpan: 10
 --- !u!198 &198121676677269650
 ParticleSystem:
   m_ObjectHideFlags: 1
