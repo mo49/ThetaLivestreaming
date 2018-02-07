@@ -63,7 +63,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 43e8a713d819048249ba5483a9997a88
   m_FloatValues:
-    b2d36c89f9498460a93fe3927e2cd123: -10.345207
+    b2d36c89f9498460a93fe3927e2cd123: 0
   m_TransitionOverrides: {}
 --- !u!243 &243741606733248868
 AudioMixerGroupController:
@@ -103,5 +103,6 @@ AudioMixerSnapshotController:
   m_Name: CastingShot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a6e82ee7881e3404db7882504b53c03d
-  m_FloatValues: {}
+  m_FloatValues:
+    b2d36c89f9498460a93fe3927e2cd123: -10.345207
   m_TransitionOverrides: {}

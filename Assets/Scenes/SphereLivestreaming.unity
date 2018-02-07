@@ -554,7 +554,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4057291565408952, guid: dd2d7dd1f4b9c4169a6c652b1baf01fb, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4057291565408952, guid: dd2d7dd1f4b9c4169a6c652b1baf01fb, type: 2}
       propertyPath: m_LocalScale.x
@@ -2840,7 +2840,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3696,8 +3696,8 @@ Transform:
   - {fileID: 1218953870}
   - {fileID: 975522446}
   - {fileID: 536740284}
-  - {fileID: 1663486824}
   - {fileID: 236184495}
+  - {fileID: 1663486824}
   - {fileID: 1052660282}
   m_Father: {fileID: 352329867}
   m_RootOrder: 0
@@ -3846,7 +3846,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4524228874911510, guid: d6466693c20e54b0ea74dcbcd6a36d1e, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4524228874911510, guid: d6466693c20e54b0ea74dcbcd6a36d1e, type: 2}
       propertyPath: m_LocalScale.x
