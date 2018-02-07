@@ -28,7 +28,6 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Update() {
-
 		if(Input.GetKeyDown(KeyCode.R)) {
 			StartCreatingEnemy ();
 		}

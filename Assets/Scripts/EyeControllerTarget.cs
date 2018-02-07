@@ -10,12 +10,16 @@ using UnityEngine.SceneManagement;
 
 public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTarget {
 
-	AudioSource m_audio;
 	[SerializeField] AudioClip m_castingSound;
 	[SerializeField] GameObject m_disasterPrefab;
+
+	AudioSource m_audio;
+	EnemyController m_enemyController;
 	
 	void Awake() {
 		m_audio = GetComponent<AudioSource> ();
+		m_enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
+
 		Hover(false);
 	}
 
@@ -44,7 +48,12 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	void Explosion() {
 		Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
+		m_enemyController.DestroyAllAtField();
 
+		Invoke("End", 2f);
+	}
+
+	void End() {
 		Destroy(gameObject);
 	}
 
