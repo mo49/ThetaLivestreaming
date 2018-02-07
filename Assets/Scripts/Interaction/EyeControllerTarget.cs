@@ -13,11 +13,13 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	[SerializeField] AudioClip m_castingSound;
 	[SerializeField] GameObject m_disasterPrefab;
 
+	DisasterManager disasterManager;
 	AudioSource m_audio;
 	EnemyController m_enemyController;
 	SwitchUI m_switchUI;
 	
 	void Awake() {
+		disasterManager = DisasterManager.Instance;
 		m_audio = GetComponent<AudioSource> ();
 		m_enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
 		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
@@ -35,6 +37,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	public void OnEyeContollerClick() {
 		// 視線マーカーでクリック
+		// 詠唱開始
+		disasterManager.SetIsCasting(true);
 		m_audio.PlayOneShot(m_castingSound);
 		Debug.Log ("音源の時間：" + m_castingSound.length);
 		Invoke ("Explosion", m_castingSound.length - 2f);
@@ -59,6 +63,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	}
 
 	void End() {
+		disasterManager.SetIsCasting(false);
 		Destroy(transform.parent.gameObject);
 	}
 

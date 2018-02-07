@@ -33,7 +33,7 @@ public class EyeController : MonoBehaviour {
 
 		// 物理オブジェクトのヒットテスト
 		bool hasHit = Physics.Raycast (transform.position, transform.forward, out hitInfo);
-		if ( hasHit && hitInfo.collider.GetComponent<EyeControllerTarget>() != null ) {
+		if ( hasHit && hitInfo.collider.GetComponent<EyeControllerTarget>() != null && !DisasterManager.Instance.GetIsCasting() ) {
 
 			//ターゲットが変更された場合
 			if ( hitObject != hitInfo.collider.gameObject ) {
