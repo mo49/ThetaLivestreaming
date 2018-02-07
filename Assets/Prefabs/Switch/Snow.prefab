@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114416372483173894}
   - component: {fileID: 114829311141511138}
   - component: {fileID: 114016766294986918}
+  - component: {fileID: 82414696323820734}
   m_Layer: 0
   m_Name: Snow
   m_TagString: Disaster/Snow
@@ -114,6 +115,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82414696323820734
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1093890075823976}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114016766294986918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,7 +206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f543cb2472ef654fb96ebc8be0d4692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_audio: {fileID: 0}
+  m_castingSound: {fileID: 8300000, guid: a5b23b363e54b47b68d45031cbe140ad, type: 3}
+  m_disasterSound: {fileID: 0}
+  m_disasterPrefab: {fileID: 1392664634882012, guid: c28c4e1b554484809b8e80d3e7754c51,
+    type: 2}
 --- !u!114 &114416372483173894
 MonoBehaviour:
   m_ObjectHideFlags: 1

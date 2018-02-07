@@ -10,10 +10,14 @@ using UnityEngine.SceneManagement;
 
 public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTarget {
 
-	[SerializeField] AudioSource m_audio;
-	Color _color;
-
+	AudioSource m_audio;
+	[SerializeField] AudioClip m_castingSound;
+	[SerializeField] AudioClip m_disasterSound;
+	// [SerializeField] GameObject m_disasters;
+	[SerializeField] GameObject m_disasterPrefab;
+	
 	void Awake() {
+		m_audio = GetComponent<AudioSource> ();
 		Hover(false);
 	}
 
@@ -24,7 +28,10 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	public void OnEyeContollerClick() {
 		// 視線マーカーでクリック
-		//m_audio.PlayOneShot(m_audio.clip);
+		m_audio.PlayOneShot(m_castingSound);
+		Debug.Log ("音源の時間：" + m_castingSound.length);
+		Invoke ("Explosion", m_castingSound.length - 2f);
+
 	}
 
 	public void OnTriggerClick(bool isClick) {
@@ -36,6 +43,14 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 				= isOn 
 				? new Color (1f, 1f, 1f)
 				: new Color (color, color, color);
+	}
+
+	void Explosion() {
+		var disasterInstance = Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
+		// disasterInstance.transform.parent = m_disasters.transform;
+		m_audio.PlayOneShot(m_disasterSound);
+
+		Destroy(gameObject);
 	}
 
 }
