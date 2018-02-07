@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour {
 
 	[SerializeField] GameObject attackEffectPrefab;
 	[SerializeField] GameObject dieEffectPrefab;
-	[SerializeField] int attackPower = 3;
+	[SerializeField] int attackPower = 2;
 	private Animator _animator;
 	private Rigidbody _rb;
 

@@ -54,7 +54,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	}
 
 	void End() {
-		Destroy(gameObject);
+		Destroy(transform.parent.gameObject);
 	}
 
 }
