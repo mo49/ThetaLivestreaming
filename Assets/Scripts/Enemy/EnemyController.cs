@@ -17,6 +17,10 @@ public class EnemyController : MonoBehaviour {
 	private int currentEnemyIndex = 0;
 
 	void Start() {
+		// GameStart();
+	}
+
+	void GameStart() {
 		enemyManager = EnemyManager.Instance;
 
 		enemyManager.SetMaxCount(maxEnemyNum);
@@ -28,6 +32,9 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Update() {
+		if(Input.GetKeyDown(KeyCode.Alpha0)) {
+			GameStart();
+		}
 		if(Input.GetKeyDown(KeyCode.R)) {
 			StartCreatingEnemy ();
 		}
