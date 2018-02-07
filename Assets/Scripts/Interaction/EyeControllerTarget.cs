@@ -7,11 +7,15 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTarget {
 
 	[SerializeField] AudioClip m_castingSound;
 	[SerializeField] GameObject m_disasterPrefab;
+
+	[SerializeField] AudioMixerSnapshot m_noCastingShot;
+    [SerializeField] AudioMixerSnapshot m_castingShot;
 
 	DisasterManager disasterManager;
 	AudioSource m_audio;
@@ -24,7 +28,6 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		m_enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
 		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
 
-		// Debug.Log(m_castingSound.length.ToString());
 		m_switchUI.SetCastTime(Mathf.Floor(m_castingSound.length).ToString());
 
 		Hover(false);
@@ -40,7 +43,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		// 詠唱開始
 		disasterManager.SetIsCasting(true);
 		m_audio.PlayOneShot(m_castingSound);
-		Debug.Log ("音源の時間：" + m_castingSound.length);
+		m_castingShot.TransitionTo(.5f);
 		Invoke ("Explosion", m_castingSound.length - 2f);
 	}
 
@@ -59,11 +62,12 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
 		m_enemyController.DestroyAllAtField();
 
-		Invoke("End", 2f);
+		Invoke("End", 8f);
 	}
 
 	void End() {
 		disasterManager.SetIsCasting(false);
+		m_noCastingShot.TransitionTo(.5f);
 		Destroy(transform.parent.gameObject);
 	}
 

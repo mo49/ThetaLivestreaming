@@ -51,6 +51,14 @@ https://on-jin.com/sound/listshow.php?pagename=kan&title=%E6%BB%9D&janl=%E7%92%B
 - 爆発(水）
 http://commons.nicovideo.jp/material/nc85041
 
+- BGM
+http://www.music-note.jp/bgm/fantasy.html
+https://maoudamashii.jokersounds.com/list/bgm10.html
+
+- 決定音
+https://soundeffect-lab.info/sound/button/
+
+
 ### 画像
 
 - [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos)

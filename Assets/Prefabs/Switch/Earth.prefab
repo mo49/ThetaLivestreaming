@@ -389,6 +389,9 @@ MonoBehaviour:
   m_castingSound: {fileID: 8300000, guid: 7cd38f1534878486594b71ed108d8fda, type: 3}
   m_disasterPrefab: {fileID: 1955970636209338, guid: 447b374d37cef4b528f6cf1be4c2c3ec,
     type: 2}
+  m_noCastingShot: {fileID: 24500006, guid: b1debeb163e4045bbae4fa35b4a59373, type: 2}
+  m_castingShot: {fileID: 245293371826637616, guid: b1debeb163e4045bbae4fa35b4a59373,
+    type: 2}
 --- !u!114 &114688019063304946
 MonoBehaviour:
   m_ObjectHideFlags: 1

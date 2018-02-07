@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cd9432855aed4f4d9d9fff2252da1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesh: {fileID: 4300000, guid: cf51cee0554bf41b4bca76eea4afbd0a, type: 2}
+  mesh: {fileID: 0}
   front:
     side: 0
     offset: {x: 0, y: 0}
@@ -326,6 +326,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_castingSound: {fileID: 8300000, guid: a5b23b363e54b47b68d45031cbe140ad, type: 3}
   m_disasterPrefab: {fileID: 1443960824676170, guid: 0fc6a087e90634733bc03db1f09a6404,
+    type: 2}
+  m_noCastingShot: {fileID: 24500006, guid: b1debeb163e4045bbae4fa35b4a59373, type: 2}
+  m_castingShot: {fileID: 245293371826637616, guid: b1debeb163e4045bbae4fa35b4a59373,
     type: 2}
 --- !u!114 &114166725754737318
 MonoBehaviour:
