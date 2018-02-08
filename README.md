@@ -58,6 +58,8 @@ https://maoudamashii.jokersounds.com/list/bgm10.html
 - 決定音
 https://soundeffect-lab.info/sound/button/
 
+- オープニング
+https://maoudamashii.jokersounds.com/list/game5.html
 
 ### 画像
 

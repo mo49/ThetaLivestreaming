@@ -46,7 +46,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		// 詠唱開始
 		disasterManager.SetIsCasting(true);
 		m_audio.PlayOneShot(m_castingSound);
-		m_castingShot.TransitionTo(.5f);
+		// m_castingShot.TransitionTo(.5f);
+		BgmManager.Instance.CurrentAudioSource.volume = 0.05f;
 
 		var chargeInstance = Instantiate(m_castChargePrefab, transform.position, Quaternion.identity);
 		chargeInstance.transform.parent = transform;
@@ -73,7 +74,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 	void End() {
 		disasterManager.SetIsCasting(false);
-		m_noCastingShot.TransitionTo(.5f);
+		// m_noCastingShot.TransitionTo(.5f);
+		BgmManager.Instance.CurrentAudioSource.volume = 0.3f;
 		Destroy(transform.parent.gameObject);
 	}
 

@@ -23,8 +23,6 @@ public class EyeController : MonoBehaviour {
 	GameObject hitObject;
 	bool       hasClicked = false;
 
-	// bool       isStarted = false;
-
 	//------------------------------------------------------------------------------------------------------------------------------//
 	void Start () {
 		indicator = transform.Find ("Indicator").GetComponent<Image>();
@@ -37,12 +35,6 @@ public class EyeController : MonoBehaviour {
 		bool hasHit = Physics.Raycast (transform.position, transform.forward, out hitInfo);
 		if ( hasHit && !DisasterManager.Instance.GetIsCasting() ) {
 			// if ( hasHit && hitInfo.collider.GetComponent<EyeControllerTarget>() != null && !DisasterManager.Instance.GetIsCasting() ) 
-
-			// if(isStarted) {
-			// 	if(hitInfo.collider.GetComponent<EyeControllerTarget>() == null || DisasterManager.Instance.GetIsCasting()) {
-			// 		return;
-			// 	}
-			// }
 
 			//ターゲットが変更された場合
 			if ( hitObject != hitInfo.collider.gameObject ) {

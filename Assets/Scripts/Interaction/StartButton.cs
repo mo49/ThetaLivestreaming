@@ -28,6 +28,11 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 		Hover(false);
 	}
 
+	void Start() {
+		BgmManager.Instance.TargetVolume = 0.5f;
+		BgmManager.Instance.Play("Opening");
+	}
+
 	void Update() {
 		m_slider.value = m_indicator.fillAmount;
 	}
@@ -44,6 +49,8 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 		}
 
 		m_audio.PlayOneShot(m_selectedSound);
+		BgmManager.Instance.TargetVolume = 0.3f;
+		BgmManager.Instance.Play("Battle01");
 		enemyController.GameStart();
 		foreach (var item in m_hiddenItems) {
 			item.SetActive(true);

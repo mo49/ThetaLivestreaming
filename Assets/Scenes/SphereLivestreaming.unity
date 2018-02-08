@@ -3308,7 +3308,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1369859911}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243741606733248868, guid: b1debeb163e4045bbae4fa35b4a59373,
     type: 2}
@@ -3394,7 +3394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb4f41eebcd74975b0d48596d0f3fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 0
+  DebugMode: 1
   TargetVolume: 1
   TimeToFade: 2
   CrossFadeRatio: 1
