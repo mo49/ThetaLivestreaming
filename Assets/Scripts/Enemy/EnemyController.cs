@@ -68,6 +68,7 @@ public class EnemyController : MonoBehaviour {
 			));
 			currentEnemyIndex++;
 			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
+			// yield return null;
 		}
 	}
 

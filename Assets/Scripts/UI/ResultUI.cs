@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class ResultUI : MonoBehaviour {
 
@@ -21,6 +22,8 @@ public class ResultUI : MonoBehaviour {
 		yield return new WaitForSeconds(2f);
 		PlaySound(m_winSound, true);
 		DrawText("win");
+		TextAnimation();
+		Confetti();
 	}
 
 	public IEnumerator Lose() {
@@ -46,5 +49,24 @@ public class ResultUI : MonoBehaviour {
 		_audio.clip = _clip;
 		_audio.loop = _isLoop;
 		_audio.Play();
+	}
+
+
+	// debug
+	void Update() {
+		if(Input.GetKeyDown(KeyCode.Space)){
+			TextAnimation();
+		}
+	}
+
+	void TextAnimation() {
+		m_resultUI.transform.localScale = new Vector3(1f,0f,1f);
+		m_resultUI.transform
+			.DOScale(new Vector3(1f,1f), 1.5f)
+			.SetEase(Ease.OutElastic);
+	}
+
+	void Confetti() {
+
 	}
 }
