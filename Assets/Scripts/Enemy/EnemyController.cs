@@ -83,7 +83,7 @@ public class EnemyController : MonoBehaviour {
 
 		// 終了判定
 		if(enemyManager.GetAliveCount() <= 0) {
-			resultUI.Win();
+			resultUI.StartCoroutine("Win");
 			return;
 		}
 		Invoke ("StartCreatingEnemy", 8f);

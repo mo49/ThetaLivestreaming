@@ -12,6 +12,8 @@ public class PlayerUI : MonoBehaviour {
 
 	HitPointManager hpManager;
 
+	bool isFinished = false;
+
 	void Start () {
 		resultUI = GetComponent<ResultUI>();
 		hpManager = HitPointManager.Instance;
@@ -30,9 +32,10 @@ public class PlayerUI : MonoBehaviour {
 			m_hpFillImage.color = Color.red;
 		}
 
-		if(currentHP <= 0) {
+		if(currentHP <= 0 && !isFinished) {
 			// lose
-			resultUI.Lose();
+			isFinished = true;
+			resultUI.StartCoroutine("Lose");
 		}
 	}
 }
