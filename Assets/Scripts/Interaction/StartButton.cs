@@ -15,6 +15,8 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 	[SerializeField] AudioClip m_selectedSound;
 	[SerializeField] GameObject[] m_hiddenItems;
 	[SerializeField] EnemyController enemyController;
+	[SerializeField] RealPlayerController realPlayerController;
+	[SerializeField] GameObject m_intro;
 
 	AudioSource m_audio;
 	Slider m_slider;
@@ -44,10 +46,14 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 
 	public void OnEyeContollerClick() {
 		// 視線マーカーでクリック
+		// 消す
 		foreach (Transform childTrans in transform) {
 			childTrans.gameObject.SetActive(false);
 		}
+		realPlayerController.HideGuide();
+		m_intro.SetActive(false);
 
+		// 出す
 		m_audio.PlayOneShot(m_selectedSound);
 		BgmManager.Instance.TargetVolume = 0.3f;
 		BgmManager.Instance.Play("Battle01");

@@ -12,4 +12,8 @@ public class RealPlayerController : MonoBehaviour {
 		}
 	}
 
+	public void HideGuide() {
+		m_playerRenderer.enabled = false;
+	}
+
 }
