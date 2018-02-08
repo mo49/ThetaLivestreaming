@@ -16,11 +16,7 @@ public class EnemyController : MonoBehaviour {
 
 	private int currentEnemyIndex = 0;
 
-	void Start() {
-		// GameStart();
-	}
-
-	void GameStart() {
+	public void GameStart() {
 		enemyManager = EnemyManager.Instance;
 
 		enemyManager.SetMaxCount(maxEnemyNum);

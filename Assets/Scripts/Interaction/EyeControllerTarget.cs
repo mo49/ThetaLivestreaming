@@ -42,6 +42,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	public void OnEyeContollerClick() {
 		// 視線マーカーでクリック
 		m_audio.PlayOneShot(m_selectedSound);
+
 		// 詠唱開始
 		disasterManager.SetIsCasting(true);
 		m_audio.PlayOneShot(m_castingSound);
