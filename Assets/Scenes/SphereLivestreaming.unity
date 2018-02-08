@@ -11992,6 +11992,17 @@ MonoBehaviour:
   boneID: 265
   ikEnabled: 0
   ikWeight: 1
+--- !u!114 &1998985053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1998984783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0c038345a12474385a8f57d5f1caf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1998985170 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400474, guid: 7373e23febe84c844af23783e4c45974, type: 3}

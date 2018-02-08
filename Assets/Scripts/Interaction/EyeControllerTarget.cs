@@ -21,12 +21,14 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	DisasterManager disasterManager;
 	AudioSource m_audio;
 	EnemyController m_enemyController;
+	MeguminController m_meguminController;
 	SwitchUI m_switchUI;
 	
 	void Awake() {
 		disasterManager = DisasterManager.Instance;
 		m_audio = GetComponent<AudioSource> ();
 		m_enemyController = GameObject.Find("Enemy").GetComponent<EnemyController>();
+		m_meguminController = GameObject.Find("Megumin").GetComponent<MeguminController>();
 		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
 
 		m_switchUI.SetCastTime(Mathf.Floor(m_castingSound.length).ToString());
@@ -49,6 +51,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		// m_castingShot.TransitionTo(.5f);
 		BgmManager.Instance.CurrentAudioSource.volume = 0.05f;
 
+		m_meguminController.Casting();
+
 		var chargeInstance = Instantiate(m_castChargePrefab, transform.position, Quaternion.identity);
 		chargeInstance.transform.parent = transform;
 		Invoke ("Explosion", m_castingSound.length - 2f);
@@ -66,6 +70,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	}
 
 	void Explosion() {
+		m_meguminController.Explosion();
+
 		Instantiate (m_disasterPrefab, Vector3.zero, Quaternion.identity);
 		m_enemyController.DestroyAllAtField();
 
@@ -76,6 +82,9 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		disasterManager.SetIsCasting(false);
 		// m_noCastingShot.TransitionTo(.5f);
 		BgmManager.Instance.CurrentAudioSource.volume = 0.3f;
+
+		m_meguminController.Idle();
+
 		Destroy(transform.parent.gameObject);
 	}
 
