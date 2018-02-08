@@ -61,6 +61,11 @@ https://soundeffect-lab.info/sound/button/
 - オープニング
 https://maoudamashii.jokersounds.com/list/game5.html
 
+- 勝利/敗北
+https://maoudamashii.jokersounds.com/list/game17.html
+
+
+
 ### 画像
 
 - [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos)

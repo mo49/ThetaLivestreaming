@@ -8,10 +8,12 @@ public class PlayerUI : MonoBehaviour {
 	[SerializeField] int m_maxHitPoint;
 	[SerializeField] Slider m_hpSlider;
 	[SerializeField] Image m_hpFillImage;
+	ResultUI resultUI;
 
 	HitPointManager hpManager;
 
 	void Start () {
+		resultUI = GetComponent<ResultUI>();
 		hpManager = HitPointManager.Instance;
 
 		// init
@@ -26,6 +28,11 @@ public class PlayerUI : MonoBehaviour {
 
 		if((float)currentHP / (float)m_maxHitPoint < 0.3f) {
 			m_hpFillImage.color = Color.red;
+		}
+
+		if(currentHP <= 0) {
+			// lose
+			resultUI.Lose();
 		}
 	}
 }

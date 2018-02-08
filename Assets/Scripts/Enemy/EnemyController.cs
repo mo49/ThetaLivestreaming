@@ -9,6 +9,7 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] Transform goalTrans;
 	[SerializeField] Transform enemySpawnAreaTrans;
 	[SerializeField] EnemyUI enemyUI;
+	[SerializeField] ResultUI resultUI;
 
 	[SerializeField] int maxEnemyNum;
 
@@ -28,9 +29,6 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	void Update() {
-		if(Input.GetKeyDown(KeyCode.Alpha0)) {
-			GameStart();
-		}
 		if(Input.GetKeyDown(KeyCode.R)) {
 			StartCreatingEnemy ();
 		}
@@ -85,7 +83,7 @@ public class EnemyController : MonoBehaviour {
 
 		// 終了判定
 		if(enemyManager.GetAliveCount() <= 0) {
-			Debug.Log("勝ち!!");
+			resultUI.Win();
 			return;
 		}
 		Invoke ("StartCreatingEnemy", 8f);
