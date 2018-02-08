@@ -3119,6 +3119,7 @@ GameObject:
   - component: {fileID: 1339365472}
   - component: {fileID: 1339365474}
   - component: {fileID: 1339365473}
+  - component: {fileID: 1339365475}
   m_Layer: 2
   m_Name: IntroUI
   m_TagString: Untagged
@@ -3166,7 +3167,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 80
@@ -3175,7 +3176,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: "\u81EA\u5206\u306E\u80F4\u4F53\u3092\n\u30B3\u30B3\u306B\u91CD\u306D\u3066\u306D\uFF01\n\u2193"
 --- !u!222 &1339365474
 CanvasRenderer:
@@ -3183,6 +3184,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1339365471}
+--- !u!114 &1339365475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339365471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_EffectDistance: {x: 3, y: -3}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1353646388
 GameObject:
   m_ObjectHideFlags: 0

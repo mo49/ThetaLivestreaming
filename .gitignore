@@ -34,6 +34,12 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-Assets/MMD4Mecanim/*
 Assets/ThetaShaderPack/*
 Assets/ThetaShaderPack.meta
+
+Assets/Libraries/MMD4Mecanim/*
+Assets/Libraries/MMD4Mecanim.meta
+Assets/Libraries/BulletXNA/*
+Assets/Libraries/BulletXNA.meta
+Assets/Models/MMD/*
+Assets/Models/MMD.meta
