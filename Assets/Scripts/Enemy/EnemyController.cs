@@ -58,7 +58,7 @@ public class EnemyController : MonoBehaviour {
 			enemyTrans.parent = enemySpawnAreaTrans;
 			enemyTrans.localPosition = new Vector3 (
 				Mathf.Sin(Random.Range(-1f,1f)) * 5f,
-				Random.Range(-2f,0.5f),
+				Random.Range(-2f,0f),
 				Mathf.Sin(Random.Range(-1f,1f)) * 15f
 			);
 			enemyTrans.LookAt (new Vector3(
