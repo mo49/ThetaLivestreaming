@@ -3819,7 +3819,7 @@ MonoBehaviour:
     type: 2}
   m_winConfettiStarsMoons: {fileID: 1956786839716472, guid: b22b3de0151e44b1bbcb2b95626fc095,
     type: 2}
-  m_aroundConfettiCount: 15
+  m_aroundConfettiCount: 20
   confettiRadius: 8
 --- !u!82 &1353646393
 AudioSource:
