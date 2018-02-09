@@ -56,7 +56,7 @@ DMCAに準じてMMDモデルはアップしていません。
 
 ### 画像
 
-- [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos
+- [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos)
 - [台風アイコン](http://icooon-mono.com/16041-%E5%8F%B0%E9%A2%A8%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E7%B4%A0%E6%9D%90/)
 - [炎アイコン](http://icooon-mono.com/16105-%E7%82%8E%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/)
 - [地震アイコン](http://icooon-mono.com/15889-%E5%9C%B0%E9%9C%87%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B31/)
