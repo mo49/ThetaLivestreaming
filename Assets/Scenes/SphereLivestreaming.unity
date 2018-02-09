@@ -2748,6 +2748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971954822}
   - component: {fileID: 971954823}
+  - component: {fileID: 971954824}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2783,6 +2784,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ballPrefab: {fileID: 1312692305994914, guid: cdf37a8e07c774018b9d3a296448b1f6,
     type: 2}
+--- !u!114 &971954824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971954821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d384c829774434aa7a5a6e5d64e253b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 1989803911}
 --- !u!1001 &975522445
 Prefab:
   m_ObjectHideFlags: 0
