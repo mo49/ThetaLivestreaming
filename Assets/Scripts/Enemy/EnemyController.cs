@@ -68,8 +68,8 @@ public class EnemyController : MonoBehaviour {
 				goalTrans.position.z
 			));
 			currentEnemyIndex++;
-			// yield return new WaitForSeconds (Random.Range(0.5f, 3f));
-			yield return null;
+			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
+			// yield return null;
 		}
 	}
 
