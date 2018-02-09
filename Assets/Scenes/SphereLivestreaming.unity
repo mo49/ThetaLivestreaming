@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -5692,14 +5692,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1989803908}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0.9893614, z: 0, w: -0.14547859}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1064251416}
   m_Father: {fileID: 971954822}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -196.73, z: 0}
 --- !u!1001 &1998984513
 Prefab:
   m_ObjectHideFlags: 0
@@ -5755,6 +5755,14 @@ Prefab:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4f53ef98ea87c31498cbcf07427e13ba, type: 2}
+    - target: {fileID: 400536, guid: 7373e23febe84c844af23783e4c45974, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400370, guid: 7373e23febe84c844af23783e4c45974, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7373e23febe84c844af23783e4c45974, type: 3}
   m_IsPrefabParent: 0
@@ -12003,6 +12011,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0c038345a12474385a8f57d5f1caf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _castingEffect: {fileID: 1003754928061688, guid: be99c54d6fac046578c7a36b1596f27f,
+    type: 2}
+  _shieldEffect: {fileID: 1157126916623294, guid: 1b0a931994df543e5aa29d62c4753b66,
+    type: 2}
 --- !u!4 &1998985170 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400474, guid: 7373e23febe84c844af23783e4c45974, type: 3}
