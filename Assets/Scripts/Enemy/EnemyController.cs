@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] Transform enemySpawnAreaTrans;
 	[SerializeField] EnemyUI enemyUI;
 	[SerializeField] ResultUI resultUI;
+	[SerializeField] DangerZone dangerZone;
 
 	[SerializeField] int maxEnemyNum;
 
@@ -81,6 +82,8 @@ public class EnemyController : MonoBehaviour {
 		StopCreatingEnemy();
 
 		enemyManager.SetAliveCount(enemyManager.GetAliveCount() - enemyCountAtField);
+
+		dangerZone.Hide();
 
 		// 終了判定
 		if(enemyManager.GetAliveCount() <= 0) {

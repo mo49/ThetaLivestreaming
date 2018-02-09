@@ -1433,6 +1433,7 @@ GameObject:
   - component: {fileID: 410229786}
   - component: {fileID: 410229785}
   - component: {fileID: 410229784}
+  - component: {fileID: 410229787}
   m_Layer: 2
   m_Name: DangerZone
   m_TagString: Untagged
@@ -1506,6 +1507,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410229782}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &410229787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410229782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689d1ee4f8f8f469c98930bbb189d4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dangerUI: {fileID: 91458273}
 --- !u!43 &417102679
 Mesh:
   m_ObjectHideFlags: 0
@@ -12093,6 +12106,7 @@ MonoBehaviour:
   enemySpawnAreaTrans: {fileID: 58311330}
   enemyUI: {fileID: 1353646391}
   resultUI: {fileID: 1353646392}
+  dangerZone: {fileID: 410229787}
   maxEnemyNum: 100
 --- !u!4 &2078573638
 Transform:
