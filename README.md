@@ -32,8 +32,8 @@ HMDをかぶるとリアルの自分が目の前に映ります。
 
 ## 素材
 
-DMCAに準じてMMDモデルはアップしていません。
-アセットストアからダウンロードしたものはリストから除いています。
+DMCAに準じてMMDモデルはアップしていません。  
+アセットストアからダウンロードしたものはリストから除いています。  
 
 
 ### モデル
@@ -44,30 +44,19 @@ DMCAに準じてMMDモデルはアップしていません。
 ### 音
 
 - [爆裂魔法](https://soundeffect-lab.info/sound/battle/)
-
 - [雷](https://on-jin.com/sound/kan.php?kate=%E9%9B%B7)
-
 - [火](https://on-jin.com/sound/listshow.php?pagename=kan&title=%E7%81%BD%E5%AE%B3%E3%83%BB%E7%81%AB%E5%B1%B1%E3%83%9E%E3%82%B0%E3%83%9E&janl=%E7%92%B0%E5%A2%83%E7%B3%BB%E9%9F%B3&bunr=%E7%81%AB%E5%B1%B1&kate=%E7%81%AB)
-
 - [滝](https://on-jin.com/sound/listshow.php?pagename=kan&title=%E6%BB%9D&janl=%E7%92%B0%E5%A2%83%E7%B3%BB%E9%9F%B3&bunr=%E5%B7%9D&kate=%E6%B0%B4)
-
 - [爆発(水）](http://commons.nicovideo.jp/material/nc85041)
-
 - [決定音](https://soundeffect-lab.info/sound/button/)
-
 - [BGMオープニング](https://maoudamashii.jokersounds.com/list/game5.html)
-
 - [BGMバトル](https://maoudamashii.jokersounds.com/list/bgm10.html)
-
 - [BGM勝利/敗北](https://maoudamashii.jokersounds.com/list/game17.html)
 
 
 ### 画像
 
-- [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos)
-
+- [天気アイコン](https://jp.freepik.com/index.php?goto=8&page=&cat=weather&type=iconos
 - [台風アイコン](http://icooon-mono.com/16041-%E5%8F%B0%E9%A2%A8%E3%81%AE%E3%83%95%E3%83%AA%E3%83%BC%E7%B4%A0%E6%9D%90/)
-
 - [炎アイコン](http://icooon-mono.com/16105-%E7%82%8E%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/)
-
 - [地震アイコン](http://icooon-mono.com/15889-%E5%9C%B0%E9%9C%87%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B31/)
