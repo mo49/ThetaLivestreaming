@@ -9,6 +9,11 @@ public class ResultUI : MonoBehaviour {
 	[SerializeField] AudioClip m_winSound;
 	[SerializeField] AudioClip m_loseSound;
 	[SerializeField] GameObject m_resultUI;
+	[SerializeField] GameObject m_winTextConfetti;
+	[SerializeField] GameObject m_winConfettiShapes;
+	[SerializeField] GameObject m_winConfettiStarsMoons;
+	[SerializeField] int m_aroundConfettiCount = 10;
+	[SerializeField] float confettiRadius = 10f;
 
 	AudioSource _audio;
 	Text _resultText;
@@ -23,6 +28,7 @@ public class ResultUI : MonoBehaviour {
 		PlaySound(m_winSound, true);
 		DrawText("win");
 		TextAnimation();
+		StartCoroutine("Confetti");
 		Confetti();
 	}
 
@@ -66,7 +72,23 @@ public class ResultUI : MonoBehaviour {
 			.SetEase(Ease.OutElastic);
 	}
 
-	void Confetti() {
-
+	IEnumerator Confetti() {
+		yield return new WaitForSeconds(1f);
+		Instantiate(m_winTextConfetti, m_resultUI.transform.position, Quaternion.identity);
+		yield return new WaitForSeconds(0.5f);
+		for (int i = 0; i < m_aroundConfettiCount; i++) {
+			float rad = Random.Range(0f,360f);
+			Vector3 targetPos = new Vector3(
+				Mathf.Sin(rad) * confettiRadius,
+				0f,
+				Mathf.Cos(rad) * confettiRadius
+			);
+			if(i%2==0) {
+				Instantiate(m_winConfettiShapes, targetPos, m_winConfettiShapes.transform.rotation);
+			} else {
+				Instantiate(m_winConfettiStarsMoons, targetPos, m_winConfettiShapes.transform.rotation);
+			}
+			yield return new WaitForSeconds(Random.Range(0f,1f));
+		}
 	}
 }

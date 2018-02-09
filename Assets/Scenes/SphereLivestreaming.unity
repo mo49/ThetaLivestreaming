@@ -3813,6 +3813,14 @@ MonoBehaviour:
   m_winSound: {fileID: 8300000, guid: f2fabf0f966644dbd9ecd91c713fa1af, type: 3}
   m_loseSound: {fileID: 8300000, guid: bbb2bb5a34f2b402d802f35aa33b3505, type: 3}
   m_resultUI: {fileID: 1592315079}
+  m_winTextConfetti: {fileID: 1090727727486072, guid: 8da693df6b7ac4c7897276b74c650513,
+    type: 2}
+  m_winConfettiShapes: {fileID: 1171407087251452, guid: 6fc4995eb066f4802ac2c27815899a65,
+    type: 2}
+  m_winConfettiStarsMoons: {fileID: 1956786839716472, guid: b22b3de0151e44b1bbcb2b95626fc095,
+    type: 2}
+  m_aroundConfettiCount: 15
+  confettiRadius: 8
 --- !u!82 &1353646393
 AudioSource:
   m_ObjectHideFlags: 0
