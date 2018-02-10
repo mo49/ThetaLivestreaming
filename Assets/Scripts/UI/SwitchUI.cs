@@ -16,9 +16,17 @@ public class SwitchUI : MonoBehaviour {
 		transform.LookAt(mainCameraTrans);
 	}
 
-	public void SetCastTime(string text) {
+	public void SetCastTime(float count) {
 		castTimeText = transform.Find("CastTime").gameObject.GetComponent<Text>();
 		
-		castTimeText.text = text;
+		castTimeText.text = count.ToString();
+	}
+
+	public IEnumerator StartCountdown(float count) {
+		while(count >= 0) {
+			SetCastTime(count);
+			count--;
+			yield return new WaitForSeconds(1f);
+		}
 	}
 }

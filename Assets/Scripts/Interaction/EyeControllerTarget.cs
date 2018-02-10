@@ -23,6 +23,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	EnemyController m_enemyController;
 	MeguminController m_meguminController;
 	SwitchUI m_switchUI;
+
+	float m_castTime;
 	
 	void Awake() {
 		disasterManager = DisasterManager.Instance;
@@ -31,7 +33,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		m_meguminController = GameObject.Find("Megumin").GetComponent<MeguminController>();
 		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
 
-		m_switchUI.SetCastTime(Mathf.Floor(m_castingSound.length).ToString());
+		m_castTime = Mathf.Floor(m_castingSound.length);
+		m_switchUI.SetCastTime(m_castTime);
 
 		Hover(false);
 	}
@@ -55,6 +58,9 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 		var chargeInstance = Instantiate(m_castChargePrefab, transform.position, Quaternion.identity);
 		chargeInstance.transform.parent = transform;
+
+		m_switchUI.StartCoroutine("StartCountdown",m_castTime);
+
 		Invoke ("Explosion", m_castingSound.length - 2f);
 	}
 
