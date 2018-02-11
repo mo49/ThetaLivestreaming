@@ -49,6 +49,7 @@ public class EnemyController : MonoBehaviour {
 	}
 
 	IEnumerator CreateEnemy() {
+		Reset ();
 		while(currentEnemyIndex < enemyManager.GetMaxCount()) {
 			var enemyInstance = Instantiate (
 				devilPrefab,
@@ -91,5 +92,16 @@ public class EnemyController : MonoBehaviour {
 			return;
 		}
 		Invoke ("StartCreatingEnemy", 8f);
+	}
+
+	void Reset() {
+		// 万一に敵が残っていた場合のリセット
+		int enemyCountAtField = enemySpawnAreaTrans.childCount;
+		if(enemyCountAtField <= 0) {
+			return;
+		}
+		for (int i = 0; i < enemyCountAtField; i++) {
+			Destroy (enemySpawnAreaTrans.GetChild (i).gameObject);
+		}
 	}
 }

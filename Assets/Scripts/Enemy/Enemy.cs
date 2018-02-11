@@ -45,10 +45,10 @@ public class Enemy : MonoBehaviour {
 
 	public IEnumerator Die() {
 		CancelInvoke("Attack");
+		_rb.velocity = Vector3.zero;
 
 		yield return new WaitForSeconds(Random.Range(0.5f, 3f));
 
-		_rb.velocity = Vector3.zero;
 		_animator.SetTrigger("Death");
 		Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
 	}
