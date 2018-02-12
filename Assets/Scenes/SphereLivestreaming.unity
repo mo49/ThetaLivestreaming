@@ -4023,7 +4023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb4f41eebcd74975b0d48596d0f3fbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 1
+  DebugMode: 0
   TargetVolume: 1
   TimeToFade: 2
   CrossFadeRatio: 1
@@ -5137,7 +5137,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 197ea5716283248e5851dab5991113d7, type: 2}
     - target: {fileID: 100000, guid: 0c1c7ff3273184cd7affb1361ec16b2b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c1c7ff3273184cd7affb1361ec16b2b, type: 3}
@@ -5644,7 +5644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1645652068882044, guid: 042142d01b081ab4ca555ec74a04c2cb, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1000010938986662, guid: 042142d01b081ab4ca555ec74a04c2cb, type: 2}
       propertyPath: m_IsActive
@@ -5670,7 +5670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1989803909
 AudioListener:
   m_ObjectHideFlags: 0
