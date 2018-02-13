@@ -25,7 +25,8 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 	SwitchUI m_switchUI;
 
 	float m_castTime;
-	
+	float m_castTimeOffset = 2f;
+
 	void Awake() {
 		disasterManager = DisasterManager.Instance;
 		m_audio = GetComponent<AudioSource> ();
@@ -33,7 +34,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		m_meguminController = GameObject.Find("Megumin").GetComponent<MeguminController>();
 		m_switchUI = transform.parent.Find("SwitchCanvas").GetComponent<SwitchUI>();
 
-		m_castTime = Mathf.Floor(m_castingSound.length);
+		m_castTime = Mathf.Floor(m_castingSound.length) - m_castTimeOffset;
 		m_switchUI.SetCastTime(m_castTime);
 
 		Hover(false);
@@ -61,7 +62,7 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 
 		m_switchUI.StartCoroutine("StartCountdown",m_castTime);
 
-		Invoke ("Explosion", m_castingSound.length - 2f);
+		Invoke ("Explosion", m_castingSound.length - m_castTimeOffset);
 	}
 
 	public void OnTriggerClick(bool isClick) {
