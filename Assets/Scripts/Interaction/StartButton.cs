@@ -16,7 +16,7 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 	[SerializeField] GameObject[] m_hiddenItems;
 	[SerializeField] EnemyController enemyController;
 	[SerializeField] RealPlayerController realPlayerController;
-	[SerializeField] GameObject m_intro;
+	[SerializeField] GameObject m_setup;
 
 	AudioSource m_audio;
 	Slider m_slider;
@@ -51,7 +51,7 @@ public class StartButton : MonoBehaviour, EyeController.IEyeControllerTarget {
 			childTrans.gameObject.SetActive(false);
 		}
 		realPlayerController.HideGuide();
-		m_intro.SetActive(false);
+		m_setup.SetActive(false);
 
 		// 出す
 		m_audio.PlayOneShot(m_selectedSound);
