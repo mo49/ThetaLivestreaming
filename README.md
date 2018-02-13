@@ -52,6 +52,7 @@ DMCAに準じてMMDモデルはアップしていません。
 - [BGMオープニング](https://maoudamashii.jokersounds.com/list/game5.html)
 - [BGMバトル](https://maoudamashii.jokersounds.com/list/bgm10.html)
 - [BGM勝利/敗北](https://maoudamashii.jokersounds.com/list/game17.html)
+- [プレイヤーボイス](https://soundeffect-lab.info/sound/voice/game.html)
 
 
 ### 画像

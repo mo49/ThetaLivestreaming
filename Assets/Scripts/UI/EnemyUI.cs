@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class EnemyUI : MonoBehaviour {
 
-	[SerializeField] Text m_enemyUI;
+	// [SerializeField] Text m_enemyUI;
+	[SerializeField] GameObject m_EnemyUI;
 
 	EnemyManager enemyManager;
 
@@ -14,6 +15,7 @@ public class EnemyUI : MonoBehaviour {
 	}
 
 	public void UpdateState() {
-		m_enemyUI.text = "敵：" + enemyManager.GetAliveCount() + " / " + enemyManager.GetMaxCount();
+		// m_enemyUI.text = "敵：" + enemyManager.GetAliveCount() + " / " + enemyManager.GetMaxCount();
+		m_EnemyUI.GetComponent<TMPro.TextMeshPro>().text = "敵：" + enemyManager.GetAliveCount() + " / " + enemyManager.GetMaxCount();
 	}
 }

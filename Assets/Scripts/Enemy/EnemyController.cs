@@ -17,6 +17,8 @@ public class EnemyController : MonoBehaviour {
 	EnemyManager enemyManager;
 
 	private int currentEnemyIndex = 0;
+	private float minSpawnRate = 0.5f;
+	private float maxSpawnRate = 2.5f;
 
 	public void GameStart() {
 		enemyManager = EnemyManager.Instance;
@@ -69,7 +71,7 @@ public class EnemyController : MonoBehaviour {
 				goalTrans.position.z
 			));
 			currentEnemyIndex++;
-			yield return new WaitForSeconds (Random.Range(0.5f, 3f));
+			yield return new WaitForSeconds (Random.Range(minSpawnRate, maxSpawnRate));
 			// yield return null;
 		}
 	}

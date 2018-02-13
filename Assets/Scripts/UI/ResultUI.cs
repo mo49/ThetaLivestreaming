@@ -8,7 +8,8 @@ public class ResultUI : MonoBehaviour {
 
 	[SerializeField] AudioClip m_winSound;
 	[SerializeField] AudioClip m_loseSound;
-	[SerializeField] GameObject m_resultUI;
+	[SerializeField] GameObject m_winUI;
+	[SerializeField] GameObject m_loseUI;
 	[SerializeField] GameObject m_winTextConfetti;
 	[SerializeField] GameObject m_winConfettiShapes;
 	[SerializeField] GameObject m_winConfettiStarsMoons;
@@ -16,23 +17,29 @@ public class ResultUI : MonoBehaviour {
 	[SerializeField] float confettiRadius = 10f;
 
 	AudioSource _audio;
-	Text _resultText;
+	TMPro.TextMeshProUGUI _resultText;
+
+	GameObject _resultUI;
 
 	void Awake() {
 		_audio = GetComponent<AudioSource>();
-		_resultText = m_resultUI.GetComponent<Text>();
 	}
 
 	public IEnumerator Win() {
+		_resultUI = m_winUI;
+		_resultText = _resultUI.GetComponent<TMPro.TextMeshProUGUI>();
 		yield return new WaitForSeconds(2f);
 		PlaySound(m_winSound, true);
 		DrawText("win");
-		TextAnimation();
+		// HOTFIX: アニメーションさせると文字がすべて塗りつぶされる
+		// TextAnimation();
 		StartCoroutine("Confetti");
 		Confetti();
 	}
 
 	public IEnumerator Lose() {
+		_resultUI = m_loseUI;
+		_resultText = _resultUI.GetComponent<TMPro.TextMeshProUGUI>();
 		yield return new WaitForSeconds(2f);
 		PlaySound(m_loseSound, false);
 		DrawText("lose");
@@ -42,11 +49,11 @@ public class ResultUI : MonoBehaviour {
 	void DrawText(string _result) {
 		if(_result == "win"){
 			_resultText.text = "GAME CLEAR!";
-			_resultText.color = Color.yellow;
+			// _resultText.color = Color.yellow;
 		}
 		else if(_result == "lose") {
 			_resultText.text = "GAME OVER...";
-			_resultText.color = Color.white;
+			// _resultText.color = Color.white;
 		}
 	}
 
@@ -66,15 +73,15 @@ public class ResultUI : MonoBehaviour {
 	}
 
 	void TextAnimation() {
-		m_resultUI.transform.localScale = new Vector3(1f,0f,1f);
-		m_resultUI.transform
+		_resultUI.transform.localScale = new Vector3(1f,0f,1f);
+		_resultUI.transform
 			.DOScale(new Vector3(1f,1f), 1.5f)
 			.SetEase(Ease.OutElastic);
 	}
 
 	IEnumerator Confetti() {
 		yield return new WaitForSeconds(1f);
-		Instantiate(m_winTextConfetti, m_resultUI.transform.position, Quaternion.identity);
+		Instantiate(m_winTextConfetti, _resultUI.transform.position, Quaternion.identity);
 		yield return new WaitForSeconds(0.5f);
 		for (int i = 0; i < m_aroundConfettiCount; i++) {
 			float rad = Random.Range(0f,360f);

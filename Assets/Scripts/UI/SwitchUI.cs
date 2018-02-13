@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class SwitchUI : MonoBehaviour {
 
 	Transform mainCameraTrans;
-	Text castTimeText;
+	// Text castTimeText;
+	TMPro.TextMeshProUGUI castTimeText;
 
 	void Awake () {
 		mainCameraTrans = GameObject.FindGameObjectWithTag("MainCamera").transform;
@@ -17,8 +18,9 @@ public class SwitchUI : MonoBehaviour {
 	}
 
 	public void SetCastTime(float count) {
-		castTimeText = transform.Find("CastTime").gameObject.GetComponent<Text>();
-		
+		// castTimeText = transform.Find("CastTime").gameObject.GetComponent<Text>();
+		castTimeText = transform.Find("CastTime").gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+
 		castTimeText.text = count.ToString();
 	}
 
