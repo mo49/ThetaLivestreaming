@@ -31,7 +31,7 @@ HMDをかぶるとリアルの自分が目の前に映ります。
 
 ## デモ動画
 
-https://youtu.be/U32qDGWS_Cg
+[![デモ動画](https://img.youtube.com/vi/U32qDGWS_Cg/0.jpg)](http://www.youtube.com/watch?v=U32qDGWS_Cg)
 
 
 ## 素材
