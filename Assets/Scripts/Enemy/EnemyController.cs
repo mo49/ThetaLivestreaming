@@ -17,8 +17,8 @@ public class EnemyController : MonoBehaviour {
 	EnemyManager enemyManager;
 
 	private int currentEnemyIndex = 0;
-	private float minSpawnRate = 0.5f;
-	private float maxSpawnRate = 2.5f;
+	[SerializeField] float minSpawnRate = 0f;
+	[SerializeField] float maxSpawnRate = .5f;
 
 	public void GameStart() {
 		enemyManager = EnemyManager.Instance;

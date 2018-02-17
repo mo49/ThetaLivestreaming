@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1457,7 +1457,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -300, y: 200}
-  m_SizeDelta: {x: 400, y: 150}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421362730
 MonoBehaviour:
@@ -3657,7 +3657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d1c623f251d47c7aa73e6ac3b06a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxHitPoint: 100
+  m_maxHitPoint: 200
   m_hpSlider: {fileID: 421362730}
   m_hpFillImage: {fileID: 1374990462}
 --- !u!114 &1353646391
@@ -5290,7 +5290,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u81EA\u5206\u306E\u80F4\u4F53\u3092\n\u30B3\u30B3\u306B\u91CD\u306D\u3066\u306D\uFF01\n\u2193"
+  m_text: "\u81EA\u5206\u306E\u4F53\u3092\n\u30B3\u30B3\u306B\u91CD\u306D\u3066\u306D\uFF01\n\u2193"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ab0dfb9949404793a2360eed6a2bb73, type: 2}
   m_sharedMaterial: {fileID: 21550382495462378, guid: 2ab0dfb9949404793a2360eed6a2bb73,
@@ -5358,7 +5358,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1667520932}
-    characterCount: 17
+    characterCount: 16
     spriteCount: 0
     spaceCount: 2
     wordCount: 2
@@ -12654,7 +12654,9 @@ MonoBehaviour:
   enemyUI: {fileID: 1353646391}
   resultUI: {fileID: 1353646392}
   dangerZone: {fileID: 920055774}
-  maxEnemyNum: 100
+  maxEnemyNum: 200
+  minSpawnRate: 0.1
+  maxSpawnRate: 1
 --- !u!4 &2078573638
 Transform:
   m_ObjectHideFlags: 0
@@ -12772,8 +12774,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 700
-  m_fontSizeBase: 700
+  m_fontSize: 1200
+  m_fontSizeBase: 1200
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
