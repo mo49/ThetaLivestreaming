@@ -80,7 +80,7 @@ public class EnemyController : MonoBehaviour {
 		int enemyCountAtField = enemySpawnAreaTrans.childCount;
 
 		for (int i = 0; i < enemyCountAtField; i++) {
-			enemySpawnAreaTrans.GetChild(i).GetComponent<Enemy>().StartCoroutine("Die");
+			enemySpawnAreaTrans.GetChild(i).GetComponent<Enemy>().StartCoroutine("Die", true);
 		}
 		StopCreatingEnemy();
 

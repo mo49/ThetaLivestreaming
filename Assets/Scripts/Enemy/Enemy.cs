@@ -46,11 +46,12 @@ public class Enemy : MonoBehaviour {
 		}
 	}
 
-	public IEnumerator Die() {
+	public IEnumerator Die(bool isRandomWait = false) {
 		CancelInvoke("Attack");
 		_rb.velocity = Vector3.zero;
 
-		yield return new WaitForSeconds(Random.Range(0.5f, 3f));
+		float waitDuration = isRandomWait ? Random.Range (0.2f, 2f) : 0;
+		yield return new WaitForSeconds(waitDuration);
 
 		_animator.SetTrigger("Death");
 		Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
