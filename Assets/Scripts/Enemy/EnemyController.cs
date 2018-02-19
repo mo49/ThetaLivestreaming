@@ -11,6 +11,7 @@ public class EnemyController : MonoBehaviour {
 	[SerializeField] EnemyUI enemyUI;
 	[SerializeField] ResultUI resultUI;
 	[SerializeField] DangerZone dangerZone;
+	[SerializeField] MeguminController meguminController;
 
 	[SerializeField] int maxEnemyNum;
 
@@ -91,6 +92,7 @@ public class EnemyController : MonoBehaviour {
 		// 終了判定
 		if(enemyManager.GetAliveCount() <= 0) {
 			resultUI.StartCoroutine("Win");
+			GameStatusManager.Instance.SetStatus ("win");
 			return;
 		}
 		Invoke ("StartCreatingEnemy", 8f);

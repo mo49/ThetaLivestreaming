@@ -35,6 +35,7 @@ public class PlayerUI : MonoBehaviour {
 		if(currentHP <= 0 && !isFinished) {
 			// lose
 			isFinished = true;
+			GameStatusManager.Instance.SetStatus ("lose");
 			resultUI.StartCoroutine("Lose");
 		}
 	}

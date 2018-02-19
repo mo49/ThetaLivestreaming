@@ -90,7 +90,11 @@ public class EyeControllerTarget : MonoBehaviour, EyeController.IEyeControllerTa
 		// m_noCastingShot.TransitionTo(.5f);
 		BgmManager.Instance.CurrentAudioSource.volume = 0.3f;
 
-		m_meguminController.Idle();
+		if (GameStatusManager.Instance.GetStatus () == "win") {
+			m_meguminController.Win();
+		} else {
+			m_meguminController.Idle();
+		}
 
 		Destroy(transform.parent.gameObject);
 	}

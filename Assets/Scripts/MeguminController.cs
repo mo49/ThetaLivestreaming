@@ -29,4 +29,10 @@ public class MeguminController : MonoBehaviour {
 		_animator.SetTrigger("Casting");
 		_castingEffectInstance = Instantiate(_castingEffect, transform.position, Quaternion.identity);
 	}
+	public void Win() {
+		Destroy(_shieldEffectInstance);
+
+		_animator.SetTrigger ("Win");
+		transform.LookAt (GameObject.FindGameObjectWithTag ("MainCamera").transform);
+	}
 }
