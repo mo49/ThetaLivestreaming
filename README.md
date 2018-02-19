@@ -29,16 +29,16 @@ __新感覚、なんちゃってテレイグジスタンス・タワーディフ
 詠唱時間、爆裂魔法スイッチの残数、自身のHP、敵のスピードから、  
 最適なタイミングで爆裂魔法を発生させましょう！  
 
-敵を全滅させる前にリアルの自分のHPが0になったら負け、  
+敵を全滅させる前に現実の自分のHPが0になったら負け、  
 定期的に湧いてくる敵を全滅させたら勝ちです！  
 
 
 ## デモ動画
 
-Thetaあり
+### Thetaあり
 [![デモ動画](https://img.youtube.com/vi/laqcxFj9vQ4/0.jpg)](http://www.youtube.com/watch?v=laqcxFj9vQ4)
 
-Thetaなし
+### Thetaなし
 [![デモ動画](https://img.youtube.com/vi/U32qDGWS_Cg/0.jpg)](http://www.youtube.com/watch?v=U32qDGWS_Cg)
 
 
