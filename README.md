@@ -35,10 +35,10 @@ __新感覚、なんちゃってテレイグジスタンス・タワーディフ
 
 ## デモ動画
 
-Thetaあり
+### Thetaあり
 [![デモ動画](https://img.youtube.com/vi/laqcxFj9vQ4/0.jpg)](http://www.youtube.com/watch?v=laqcxFj9vQ4)
 
-Thetaなし
+### Thetaなし
 [![デモ動画](https://img.youtube.com/vi/U32qDGWS_Cg/0.jpg)](http://www.youtube.com/watch?v=U32qDGWS_Cg)
 
 
