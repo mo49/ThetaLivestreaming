@@ -6,7 +6,9 @@ public class Enemy : MonoBehaviour {
 
 	[SerializeField] GameObject attackEffectPrefab;
 	[SerializeField] GameObject dieEffectPrefab;
-	[SerializeField] int attackPower = 3;
+	[SerializeField] int attackPower = 1;
+	[SerializeField] float minSpeed = 0.2f;
+	[SerializeField] float maxSpeed = 2f;
 	private Animator _animator;
 	private Rigidbody _rb;
 
@@ -30,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
 	void StartMoving() {
 		_rb.AddForce (
-			transform.forward * Random.Range(0.1f, 1f),
+			transform.forward * Random.Range(minSpeed, maxSpeed),
 			ForceMode.VelocityChange
 		);
 	}
@@ -40,7 +42,7 @@ public class Enemy : MonoBehaviour {
 			_rb.velocity = Vector3.zero;
 
 			// 攻撃開始
-			InvokeRepeating("Attack", 1f, 5f);
+			InvokeRepeating("Attack", 1f, 10f);
 		}
 	}
 
