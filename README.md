@@ -36,11 +36,12 @@ __新感覚、なんちゃってテレイグジスタンス・タワーディフ
 ## デモ動画
 
 ### Thetaあり
-[![デモ動画](https://img.youtube.com/vi/laqcxFj9vQ4/0.jpg)](http://www.youtube.com/watch?v=laqcxFj9vQ4)
+[![デモ動画](https://img.youtube.com/vi/xN4hQIJo50s/0.jpg)](http://www.youtube.com/watch?v=xN4hQIJo50s)
 
 ### Thetaなし
 [![デモ動画](https://img.youtube.com/vi/U32qDGWS_Cg/0.jpg)](http://www.youtube.com/watch?v=U32qDGWS_Cg)
 
+※著作権の都合上、キャラクターのセリフボイス部分はミュートにしています。
 
 ## 素材
 
